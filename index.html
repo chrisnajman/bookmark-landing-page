@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preload" href="./fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <title>A Simple Bookmark Manager</title>
+    <meta name="description"
+        content="Dummy landing page for a bookmark manager. A Frontend Mentor CSS and JavaScript Project.">
+    <link id="page-style" rel="stylesheet" href="./css/styles-nested.css">
+    <script type="module" src="./js/script.js"></script>
+
+</head>
+
+<body>
+    <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
+    <form id="theme-picker" class="theme-picker">
+        <button type="button" id="btn-theme-toggle" class="btn-theme-toggle" aria-pressed>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-moon" aria-hidden="true">
+                <path
+                    d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z">
+                </path>
+            </svg>
+            Dark Mode
+            <span class="btn-theme-state" aria-hidden="true"></span></button>
+    </form>
+    <div class="page-layout">
+        <header class="page-header">
+            <p class="message" id="message">
+                <b><span data-date>Date</span></b>: your browser doesn't support <em>CSS Nesting</em>
+                yet so the page layout will be broken. For a full list of compatible browsers/operating systems please
+                visit <a href="https://caniuse.com/css-nesting" target="_blank"
+                    rel="noopener noreferrer">caniuse.com/css-nesting</a>. Alternatively, you can <button type="button"
+                    id="stylesheet-normal" class="btn-faux-link">load a 'normal' stylesheet</button>.
+            </p>
+            <div class="page-header-inner" id="page-header-inner">
+                <img src="./img/logo-bookmark.svg" aria-hidden="true" alt="" width="145" class="logo-bookmark">
+                <button type="button" aria-hidden="true" id="mobile-nav-button" class="mobile-nav-button mob-menu-open"
+                    tabindex="0">
+                    Open menu
+                </button>
+                <nav class="navigation main-navigation">
+                    <ul role="list">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                        <li class="login"><button type="button" class="button btn-red">Login</button></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#">
+                            <span class="visually-hidden">Facebook</span>
+                            <img loading="lazy" src="./img/icon-facebook.svg" aria-hidden="true" title="Facebook" alt=""
+                                width="24" class="facebook">
+                        </a>
+                        <a href="#">
+                            <span class="visually-hidden">Twitter</span>
+                            <img loading="lazy" src="./img/icon-twitter.svg" aria-hidden="true" title="Twitter" alt=""
+                                width="24" class="twitter">
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="main" id="main-content">
+            <header class="header-main page-item">
+                <div class="image-shadow">
+                    <img aria-hidden="true" src="./img/illustration-hero.svg" alt="" width="657">
+                    <span class="shadow shadow-right" aria-hidden="true"></span>
+                </div>
+                <div class="header-main-info">
+                    <h1>A Simple Bookmark Manager</h1>
+                    <p>A clean and simple interface to organise your favourite websites. Open a new browser tab and
+                        see
+                        your sites load instantly. Try it for free.</p>
+                    <div class="buttons faux-buttons">
+                        <a href="#chrome" class="button btn-blue">Get it on Chrome</a>
+                        <a href="#firefox" class="button btn-grey">Get it on Firefox</a>
+                        <a href="#opera" class="button btn-blue">Get it on Opera</a>
+                    </div>
+                </div>
+            </header>
+            <section class="features page-item" id="features">
+                <h2>Features</h2>
+                <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync
+                    between your devices so you can access them on the go.</p>
+                <div class="tabs" id="tabs">
+                    <div role="tablist" aria-label="Features tabs">
+                        <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
+                            Simple Bookmarking
+                        </button>
+                        <span aria-hidden="true"></span>
+                        <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">
+                            Speedy Searching
+                        </button>
+                        <span aria-hidden="true"></span>
+                        <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">
+                            Easy Sharing
+                        </button>
+                    </div>
+                    <div class="tab-panels">
+                        <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+                            <img loading="lazy" aria-hidden="true" src="./img/illustration-features-tab-1.svg" alt=""
+                                width="536">
+                            <div class="features-content simple-content">
+                                <h3>Bookmarks in once click</h3>
+                                <p>Organise your bookmarks however you like. Our simple drag-and-drop interface gives
+                                    you complete control over how you manage your favourite sites.</p>
+                                <div class="buttons faux-buttons"><a href="#" class="button btn-blue">More info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+                            <img loading="lazy" aria-hidden="true" src="./img/illustration-features-tab-2.svg" alt=""
+                                width="536">
+                            <div class="features-content simple-content">
+                                <h3>Fast ipsum dolor sit.</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta itaque animi a.
+                                    Explicabo, ipsum! Cumque error animi magni cupiditate repellat.</p>
+                                <div class="buttons faux-buttons"><a href="#" class="button btn-blue">More info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+                            <img loading="lazy" aria-hidden="true" src="./img/illustration-features-tab-3.svg" alt=""
+                                width="536">
+                            <div class="features-content simple-content">
+                                <h3>Convenient ipsum dolor sit.</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta itaque animi a.
+                                    Explicabo, ipsum! Cumque error animi magni cupiditate repellat.</p>
+                                <div class="buttons faux-buttons"><a href="#" class="button btn-blue">More info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="shadow shadow-left" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="downloads page-item" id="download">
+                <h2>Download the Extension</h2>
+                <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like
+                    us to prioritize.</p>
+                <ul role="list" class="download-extensions">
+                    <li id="chrome">
+                        <div class="browser">
+                            <img loading="lazy" aria-hidden="true" src="./img/logo-chrome.svg" alt="" width="102">
+                            <h3>Add to Chrome</h3>
+                            <p>Minimum version 62</p>
+                        </div>
+                        <div class="buttons download"><button type="button" class="button btn-blue">Add &amp;
+                                install
+                                Extension</button></div>
+                    </li>
+                    <li id="firefox">
+                        <div class="browser">
+                            <img loading="lazy" aria-hidden="true" src="./img/logo-firefox.svg" alt="" width="102">
+                            <h3>Add to Firefox</h3>
+                            <p>Minimum version 55</p>
+                        </div>
+                        <div class="buttons download"><button type="button" class="button btn-blue">Add &amp;
+                                install
+                                Extension</button></div>
+                    </li>
+                    <li id="opera">
+                        <div class="browser">
+                            <img loading="lazy" aria-hidden="true" src="./img/logo-opera.svg" alt="" width="102">
+                            <h3>Add to Opera</h3>
+                            <p>Minimum version 46</p>
+                        </div>
+                        <div class="buttons download"><button type="button" class="button btn-blue">Add &amp;
+                                install
+                                Extension</button></div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="faqs page-item" id="faqs">
+                <h2>Frequently Asked Questions</h2>
+                <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to
+                    <span class="btn-faux-link">email us</span>.
+                </p>
+                <div class="accordion">
+                    <h3>
+                        <button id="accordion-open-1" class="accordion-button" data-accordion-button>
+                            What is Bookmark?
+                        </button>
+                    </h3>
+                    <div id="accordion-content-1" class="accordion-content open" data-accordion-content>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, expedita obcaecati, cum
+                            dolorum officia, maiores quam voluptates dolores necessitatibus repellat odit id praesentium
+                            nobis numquam.</p>
+                    </div>
+                    <h3>
+                        <button id="accordion-open-2" class="accordion-button" data-accordion-button>
+                            How can I request a new browser?
+                        </button>
+                    </h3>
+                    <div id="accordion-content-2" class="accordion-content open" data-accordion-content>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, expedita obcaecati, cum
+                            dolorum officia, maiores quam voluptates dolores necessitatibus repellat odit id praesentium
+                            nobis numquam.</p>
+                    </div>
+                    <h3>
+                        <button id="accordion-open-3" class="accordion-button" data-accordion-button>
+                            Is there a mobile app?
+                        </button>
+                    </h3>
+                    <div id="accordion-content-3" class="accordion-content open" data-accordion-content>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, expedita obcaecati, cum
+                            dolorum officia, maiores quam voluptates dolores necessitatibus repellat odit id praesentium
+                            nobis numquam.</p>
+                    </div>
+                    <h3>
+                        <button id="accordion-open-4" class="accordion-button" data-accordion-button>
+                            What about other Chromium browsers?
+                        </button>
+                    </h3>
+                    <div id="accordion-content-4" class="accordion-content open" data-accordion-content>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, expedita obcaecati, cum
+                            dolorum officia, maiores quam voluptates dolores necessitatibus repellat odit id praesentium
+                            nobis numquam.</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="button btn-blue">More info</a>
+                </div>
+            </section>
+            <section class="newsletter page-item" id="newsletter">
+                <header>
+                    <p>35,000&plus; already joined</p>
+                    <h2>Sign Up for our Newsletter</h2>
+                </header>
+                <form id="newsletter-form">
+                    <div id="newsletter-form-inner" class="newsletter-form-inner">
+                        <label for="email" class="visually-hidden">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email address">
+                    </div>
+                    <button class="button btn-red">Sign Up</button>
+                </form>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <h2 class="visually-hidden">Footer content</h2>
+            <nav class="navigation footer-navigation">
+                <div class="footer-navigation-inner">
+                    <img src="./img/logo-bookmark.svg" aria-hidden="true" alt="" width="145" class="logo-bookmark">
+                    <ul role="list" class="footer-main-links">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#">
+                            <span class="visually-hidden">Facebook</span>
+                            <img loading="lazy" src="./img/icon-facebook.svg" aria-hidden="true" title="Facebook" alt=""
+                                width="24">
+                        </a>
+                        <a href="#">
+                            <span class="visually-hidden">Twitter</span>
+                            <img loading="lazy" src="./img/icon-twitter.svg" aria-hidden="true" title="Twitter" alt=""
+                                width="24">
+                        </a>
+                    </div>
+                </div>
+                <ul role="list" class="custom-links">
+                    <li><a href="https://github.com/chrisnajman/bookmark-landing-page" target="_blank"
+                            rel="noopener noreferrer">GitHub Repository</a></li>
+                    <li><a href="https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158"
+                            target="_blank" rel="noopener noreferrer">Frontend Mentor Project</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
